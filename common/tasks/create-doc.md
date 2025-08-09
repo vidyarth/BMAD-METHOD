@@ -6,12 +6,12 @@
 
 When this task is invoked:
 
-1. **DISABLE ALL EFFICIENCY OPTIMIZATIONS** - This workflow requires full user interaction
-2. **MANDATORY STEP-BY-STEP EXECUTION** - Each section must be processed sequentially with user feedback
-3. **ELICITATION IS REQUIRED** - When `elicit: true`, you MUST use the 1-9 format and wait for user response
-4. **NO SHORTCUTS ALLOWED** - Complete documents cannot be created without following this workflow
+1. **DISABLE ALL EFFICIENCY OPTIMIZATIONS** - This workflow requires full user interaction where specified.
+2. **MANDATORY STEP-BY-STEP EXECUTION** - Each section must be processed sequentially with user feedback.
+3. **ELICITATION IS REQUIRED** - When `elicit: true`, you MUST use the 1-9 format and wait for user response.
+4. **NO SHORTCUTS ALLOWED** - Complete documents cannot be created without following this workflow.
 
-**VIOLATION INDICATOR:** If you create a complete document without user interaction, you have violated this workflow.
+**VIOLATION INDICATOR:** If you create a complete document without user interaction for sections marked with `elicit: true`, you have violated this workflow.
 
 ## Critical: Template Discovery
 
@@ -37,16 +37,24 @@ If a YAML Template has not been provided, list all templates from .bmad-core/tem
 
 ## Processing Flow
 
-1. **Parse YAML template** - Load template metadata and sections
-2. **Set preferences** - Show current mode (Interactive), confirm output file
-3. **Process each section:**
+1. **Check for Existing Feature and Memory Bank:**
+    -   When creating a document for a brownfield (existing) project, ask the user if the document relates to a specific feature.
+    -   If it does, search for a corresponding memory bank file (e.g., `memory_bank_<feature_name>.yaml`).
+    -   If a memory bank is found, use it as a primary source of information and context when drafting all sections of the document. This will help you understand the history of the feature and align with existing patterns.
+
+2. **General Interaction Principle:**
+    -   At any point during the process, if you are confused or lack sufficient information to proceed with confidence, do not guess. Instead, stop and ask the user for clarification. Present your question clearly and wait for their response before continuing.
+
+3. **Parse YAML template** - Load template metadata and sections
+4. **Set preferences** - Show current mode (Interactive), confirm output file
+5. **Process each section:**
    - Skip if condition unmet
    - Check agent permissions (owner/editors) - note if section is restricted to specific agents
    - Draft content using section instruction
    - Present content + detailed rationale
    - **IF elicit: true** → MANDATORY 1-9 options format
    - Save to file if possible
-4. **Continue until complete**
+6. **Continue until complete**
 
 ## Detailed Rationale Requirements
 
