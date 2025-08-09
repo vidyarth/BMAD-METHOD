@@ -45,6 +45,11 @@ Gather minimal but essential context about the existing project:
 - [ ] Impact boundaries identified
 - [ ] Success criteria established
 
+**Memory Bank Review:**
+- [ ] Checked for a memory bank related to this feature.
+- [ ] If found, reviewed the memory bank for historical context and coding patterns.
+- [ ] Ensured the story's scope and technical approach are consistent with the findings from the memory bank to avoid over-engineering.
+
 ### 2. Story Creation
 
 Create a single focused story following this structure:

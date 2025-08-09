@@ -41,6 +41,14 @@ Before creating the epic, gather essential information about the existing projec
 - [ ] Required integration points identified
 - [ ] Success criteria established
 
+**Memory Bank Analysis:**
+- [ ] Searched for a memory bank related to this feature.
+- [ ] If found, analyzed the memory bank to understand:
+  - Historical context of the feature.
+  - Common coding patterns and complexity.
+  - Reviewer feedback and potential pitfalls.
+- [ ] Used memory bank insights to inform the epic's scope and to align with the project's established style.
+
 ### 2. Epic Creation
 
 Create a focused epic following this structure:
