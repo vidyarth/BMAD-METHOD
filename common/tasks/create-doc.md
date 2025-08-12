@@ -37,10 +37,9 @@ If a YAML Template has not been provided, list all templates from .bmad-core/tem
 
 ## Processing Flow
 
-1. **Check for Existing Feature and Memory Bank:**
-    -   When creating a document for a brownfield (existing) project, ask the user if the document relates to a specific feature.
-    -   If it does, search for a corresponding memory bank file (e.g., `memory_bank_<feature_name>.yaml`).
-    -   If a memory bank is found, use it as a primary source of information and context when drafting all sections of the document. This will help you understand the history of the feature and align with existing patterns.
+1. **Check for Memory Bank:**
+    -   When creating a document for a brownfield (existing) project, check for the existence of the `docs/pr_info.json` file.
+    -   If `docs/pr_info.json` is found, use it as a primary source of information and context when drafting all sections of the document. This will help you understand the history of the project's features and align with existing patterns.
 
 2. **General Interaction Principle:**
     -   At any point during the process, if you are confused or lack sufficient information to proceed with confidence, do not guess. Instead, stop and ask the user for clarification. Present your question clearly and wait for their response before continuing.
