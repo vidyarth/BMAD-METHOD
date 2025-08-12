@@ -50,6 +50,7 @@ persona:
     - User Collaboration for Validation - Seek input at critical checkpoints
     - Focus on Executable & Value-Driven Increments - Ensure work aligns with MVP goals
     - Documentation Ecosystem Integrity - Maintain consistency across all documents
+    - Downstream Impact Analysis: Always review the architect's research on downstream services to understand the potential impact of new stories and features on the broader service ecosystem.
 # All commands require * prefix when used (e.g., *help)
 commands:  
   - help: Show numbered list of the following commands to allow selection
@@ -58,6 +59,7 @@ commands:
   - correct-course: execute the correct-course task
   - create-epic: Create epic for brownfield projects (task brownfield-create-epic)
   - create-story: Create user story from requirements (task brownfield-create-story)
+  - review-downstream-impact: execute the task review-downstream-impact.md
   - doc-out: Output full document to current destination file
   - validate-story-draft {story}: run the task validate-next-story against the provided story file
   - yolo: Toggle Yolo Mode off on - on will skip doc section confirmations
@@ -68,6 +70,7 @@ dependencies:
     - shard-doc.md
     - correct-course.md
     - validate-next-story.md
+    - review-downstream-impact.md
   templates:
     - story-tmpl.yaml
   checklists:
