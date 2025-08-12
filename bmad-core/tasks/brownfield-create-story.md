@@ -46,9 +46,9 @@ Gather minimal but essential context about the existing project:
 - [ ] Success criteria established
 
 **Memory Bank Review:**
-- [ ] Checked for a memory bank related to this feature.
-- [ ] If found, reviewed the memory bank for historical context and coding patterns.
-- [ ] Ensured the story's scope and technical approach are consistent with the findings from the memory bank to avoid over-engineering.
+- [ ] Checked for the `docs/pr_info.json` file.
+- [ ] If found, reviewed the relevant PRs in the file for historical context and coding patterns.
+- [ ] Ensured the story's scope and technical approach are consistent with the findings from `pr_info.json` to avoid over-engineering.
 
 ### 2. Story Creation
 

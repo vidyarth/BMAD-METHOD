@@ -42,12 +42,12 @@ Before creating the epic, gather essential information about the existing projec
 - [ ] Success criteria established
 
 **Memory Bank Analysis:**
-- [ ] Searched for a memory bank related to this feature.
-- [ ] If found, analyzed the memory bank to understand:
+- [ ] Checked for the `docs/pr_info.json` file.
+- [ ] If found, analyzed the relevant PRs in the file to understand:
   - Historical context of the feature.
-  - Common coding patterns and complexity.
-  - Reviewer feedback and potential pitfalls.
-- [ ] Used memory bank insights to inform the epic's scope and to align with the project's established style.
+  - Common coding patterns and complexity (by reviewing the commits and changed files).
+  - Reviewer feedback and potential pitfalls (by reading the PR bodies).
+- [ ] Used insights from `pr_info.json` to inform the epic's scope and to align with the project's established style.
 
 ### 2. Epic Creation
 
